@@ -1,4 +1,4 @@
-FROM amazonlinux:2
+FROM amazonlinux:2@sha256:8a3fbbbaf93665e495fd66e86c7c5d46de44ab0bc74460b97489820747e0a164
 
 RUN yum -y update && \
     yum -y install wget
