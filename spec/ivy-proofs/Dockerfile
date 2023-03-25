@@ -1,5 +1,5 @@
 # we need python2 support, which was dropped after buster:
-FROM debian:buster
+FROM debian:buster@sha256:235f2a778fbc0d668c66afa9fd5f1efabab94c1d6588779ea4e221e1496f89da
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update
