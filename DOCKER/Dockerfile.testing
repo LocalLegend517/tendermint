@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:latest@sha256:1724dc3128e2e63f0bc3e055fe4fa478d67f6da4bd95c0e69690f6435f658804
 
 # Grab deps (jq, hexdump, xxd, killall)
 RUN apt-get update && \
