@@ -1,6 +1,6 @@
 FROM bufbuild/buf:latest@sha256:cd756955e6be305e08c8063b7d256658aeed4507e96d103dae810ec502e8c77f as buf
 
-FROM golang:1.14-alpine3.11 as builder
+FROM golang:1.14-alpine3.11@sha256:4f1c80d88c5879067f063770c774a8ffd4de47b684333cdbe9a4ce661931b9b8 as builder
 
 RUN apk add --update --no-cache build-base curl git upx && \
   rm -rf /var/cache/apk/*
