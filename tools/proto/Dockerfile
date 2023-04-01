@@ -1,4 +1,4 @@
-FROM bufbuild/buf:latest as buf
+FROM bufbuild/buf:latest@sha256:cd756955e6be305e08c8063b7d256658aeed4507e96d103dae810ec502e8c77f as buf
 
 FROM golang:1.14-alpine3.11 as builder
 
