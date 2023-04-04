@@ -15,7 +15,7 @@ RUN GO111MODULE=on go get \
   mv /go/bin/protoc-gen-go* /usr/local/bin/
 
 
-FROM alpine:edge
+FROM alpine:edge@sha256:2d01a16bab53a8405876cec4c27235d47455a7b72b75334c614f2fb0968b3f90
 
 WORKDIR /work
 
