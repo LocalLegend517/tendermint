@@ -1,6 +1,6 @@
-FROM bufbuild/buf:latest as buf
+FROM bufbuild/buf:latest@sha256:cd756955e6be305e08c8063b7d256658aeed4507e96d103dae810ec502e8c77f as buf
 
-FROM golang:1.14-alpine3.11 as builder
+FROM golang:1.14-alpine3.11@sha256:4f1c80d88c5879067f063770c774a8ffd4de47b684333cdbe9a4ce661931b9b8 as builder
 
 RUN apk add --update --no-cache build-base curl git upx && \
   rm -rf /var/cache/apk/*
@@ -15,7 +15,7 @@ RUN GO111MODULE=on go get \
   mv /go/bin/protoc-gen-go* /usr/local/bin/
 
 
-FROM alpine:edge
+FROM alpine:edge@sha256:2d01a16bab53a8405876cec4c27235d47455a7b72b75334c614f2fb0968b3f90
 
 WORKDIR /work
 
